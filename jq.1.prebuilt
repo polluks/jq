@@ -58,7 +58,7 @@ Use the \fBapplication/json\-seq\fR MIME type scheme for separating JSON texts i
 \fB\-\-stream\fR:
 .
 .IP
-Parse the input in streaming fashion, outputing arrays of path and leaf values (scalars and empty arrays or empty objects)\. For example, \fB"a"\fR becomes \fB[[],"a"]\fR, and \fB[[],"a",["b"]]\fR becomes \fB[[0],[]]\fR, \fB[[1],"a"]\fR, and \fB[[1,0],"b"]\fR\.
+Parse the input in streaming fashion, outputting arrays of path and leaf values (scalars and empty arrays or empty objects)\. For example, \fB"a"\fR becomes \fB[[],"a"]\fR, and \fB[[],"a",["b"]]\fR becomes \fB[[0],[]]\fR, \fB[[1],"a"]\fR, and \fB[[1,0],"b"]\fR\.
 .
 .IP
 This is useful for processing very large inputs\. Use this in conjunction with filtering and the \fBreduce\fR and \fBforeach\fR syntax to reduce large inputs incrementally\.
@@ -97,7 +97,7 @@ Use a tab for each indentation level instead of two spaces\.
 \fB\-\-indent n\fR:
 .
 .IP
-Use the given number of spaces (no more than 8) for indentation\.
+Use the given number of spaces (no more than 7) for indentation\.
 .
 .IP "\(bu" 4
 \fB\-\-color\-output\fR / \fB\-C\fR and \fB\-\-monochrome\-output\fR / \fB\-M\fR:

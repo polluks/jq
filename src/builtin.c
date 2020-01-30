@@ -970,7 +970,7 @@ static jv f_match(jq_state *jq, jv input, jv regex, jv modifiers, jv testmode) {
 }
 #else /* !HAVE_LIBONIG */
 static jv f_match(jq_state *jq, jv input, jv regex, jv modifiers, jv testmode) {
-  return jv_invalid_with_msg(jv_string("jq was compiled without ONIGURUMA regex libary. match/test/sub and related functions are not available."));
+  return jv_invalid_with_msg(jv_string("jq was compiled without ONIGURUMA regex library. match/test/sub and related functions are not available."));
 }
 #endif /* HAVE_LIBONIG */
 
@@ -1465,7 +1465,7 @@ static jv f_gmtime(jq_state *jq, jv a) {
   jv_free(a);
   tmp = gmtime_r(&secs, &tm);
   if (tmp == NULL)
-    return jv_invalid_with_msg(jv_string("errror converting number of seconds since epoch to datetime"));
+    return jv_invalid_with_msg(jv_string("error converting number of seconds since epoch to datetime"));
   a = tm2jv(tmp);
   return jv_array_set(a, 5, jv_number(jv_number_value(jv_array_get(jv_copy(a), 5)) + (fsecs - floor(fsecs))));
 }
@@ -1480,7 +1480,7 @@ static jv f_gmtime(jq_state *jq, jv a) {
   jv_free(a);
   tmp = gmtime(&secs);
   if (tmp == NULL)
-    return jv_invalid_with_msg(jv_string("errror converting number of seconds since epoch to datetime"));
+    return jv_invalid_with_msg(jv_string("error converting number of seconds since epoch to datetime"));
   a = tm2jv(tmp);
   return jv_array_set(a, 5, jv_number(jv_number_value(jv_array_get(jv_copy(a), 5)) + (fsecs - floor(fsecs))));
 }

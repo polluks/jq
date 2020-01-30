@@ -322,7 +322,7 @@ null
 1
 
 #
-# Check that various builtins evalute all arguments where appropriate,
+# Check that various builtins evaluate all arguments where appropriate,
 # doing cartesian products where appropriate.
 #
 
@@ -1712,3 +1712,7 @@ false
 .x - 10
 {"x":13911860366432393}
 13911860366432382
+
+. |= try . catch .
+1
+1

@@ -112,7 +112,7 @@ sections:
 
       * `--stream`:
 
-        Parse the input in streaming fashion, outputing arrays of path
+        Parse the input in streaming fashion, outputting arrays of path
         and leaf values (scalars and empty arrays or empty objects).
         For example, `"a"` becomes `[[],"a"]`, and `[[],"a",["b"]]`
         becomes `[[0],[]]`, `[[1],"a"]`, and `[[1,0],"b"]`.
@@ -152,7 +152,7 @@ sections:
 
       * `--indent n`:
 
-        Use the given number of spaces (no more than 8) for indentation.
+        Use the given number of spaces (no more than 7) for indentation.
 
       * `--color-output` / `-C` and `--monochrome-output` / `-M`:
 
